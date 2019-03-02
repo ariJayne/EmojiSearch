@@ -10,9 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heightConstant: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
 
