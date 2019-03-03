@@ -13,7 +13,6 @@
 		D22B83522221A99E00B15D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22B83512221A99E00B15D3B /* Assets.xcassets */; };
 		D22B83552221A99E00B15D3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22B83532221A99E00B15D3B /* LaunchScreen.storyboard */; };
 		D266A46922288C1800105E2D /* customizeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266A46822288C1800105E2D /* customizeButtons.swift */; };
-		D2D01707222AE9B000187072 /* CreateDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D01706222AE9B000187072 /* CreateDropdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		D22B83542221A99E00B15D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D22B83562221A99E00B15D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D266A46822288C1800105E2D /* customizeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customizeButtons.swift; sourceTree = "<group>"; };
-		D2D01706222AE9B000187072 /* CreateDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				D22B834C2221A99D00B15D3B /* ViewController.swift */,
 				D22B834E2221A99D00B15D3B /* Main.storyboard */,
 				D266A46822288C1800105E2D /* customizeButtons.swift */,
-				D2D01706222AE9B000187072 /* CreateDropdown.swift */,
 				D22B83512221A99E00B15D3B /* Assets.xcassets */,
 				D22B83532221A99E00B15D3B /* LaunchScreen.storyboard */,
 				D22B83562221A99E00B15D3B /* Info.plist */,
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D01707222AE9B000187072 /* CreateDropdown.swift in Sources */,
 				D22B834D2221A99D00B15D3B /* ViewController.swift in Sources */,
 				D22B834B2221A99D00B15D3B /* AppDelegate.swift in Sources */,
 				D266A46922288C1800105E2D /* customizeButtons.swift in Sources */,

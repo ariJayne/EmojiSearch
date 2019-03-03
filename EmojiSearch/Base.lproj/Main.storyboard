@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-Ia-pV3">
-                                <rect key="frame" x="0.0" y="411" width="320" height="137"/>
+                                <rect key="frame" x="0.0" y="270" width="320" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
@@ -298,7 +298,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E1f-8b-4wG" secondAttribute="bottom" constant="10" id="4IW-cs-1MQ"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="leading" secondItem="RDJ-Ia-pV3" secondAttribute="leading" id="JrO-Hf-etf"/>
-                                    <constraint firstAttribute="height" constant="137" id="S13-fr-6GC"/>
+                                    <constraint firstAttribute="height" constant="190" id="S13-fr-6GC"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="top" secondItem="RDJ-Ia-pV3" secondAttribute="top" id="ZdM-gx-OJl"/>
                                     <constraint firstAttribute="trailing" secondItem="E1f-8b-4wG" secondAttribute="trailing" id="rwR-qv-o8d"/>
                                 </constraints>
@@ -321,85 +321,57 @@
                                     <constraint firstAttribute="height" constant="122" id="Uqi-5V-mTW"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rZg-Zb-wre">
-                                <rect key="frame" x="0.0" y="361" width="320" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r8r-q7-Z3e">
+                                <rect key="frame" x="10" y="209" width="300" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-PQ-pCD">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-L6-6X7">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="qBD-zv-0r3"/>
+                                            <constraint firstAttribute="height" constant="30" id="V4E-MK-Rth"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Emotion By Group">
-                                            <color key="titleColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Find Emoji By Group">
+                                            <color key="titleColor" red="0.0056670984455958751" green="0.0037106001727115843" blue="0.0051324141729279333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="handleSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFS-eD-sYo"/>
+                                            <action selector="onClickFindEmojiBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5r-Ou-gXM"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7f-EL-PVz">
-                                        <rect key="frame" x="0.0" y="40" width="320" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WxS-jp-kkz">
+                                        <rect key="frame" x="0.0" y="30" width="300" height="170"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="oEP-T3-3yy"/>
+                                            <constraint firstAttribute="height" constant="170" id="SJJ-uY-62D"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Happy">
-                                            <color key="titleColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="NfC-kn-7xw" style="IBUITableViewCellStyleDefault" id="9Mt-Tm-E0T">
+                                                <rect key="frame" x="0.0" y="28" width="300" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Mt-Tm-E0T" id="Z5g-g9-2w9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NfC-kn-7xw">
+                                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableViewCell>
+                                        </prototypes>
                                         <connections>
-                                            <action selector="emotionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cq-3L-qHR"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="mc2-4e-9Tj"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Qez-a5-YvH"/>
                                         </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je9-ca-klV">
-                                        <rect key="frame" x="0.0" y="80" width="320" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Y6p-Sl-Wme"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Sad">
-                                            <color key="titleColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="emotionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrJ-Hn-Ubw"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eat-UE-CbP">
-                                        <rect key="frame" x="0.0" y="120" width="320" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="OJf-Wk-aIq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Love">
-                                            <color key="titleColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="emotionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Opl-GJ-b6c"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02a-uz-YSR">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="tpW-l1-lLz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Anger">
-                                            <color key="titleColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="emotionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mqh-6R-G48"/>
-                                        </connections>
-                                    </button>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eat-UE-CbP" firstAttribute="top" secondItem="je9-ca-klV" secondAttribute="bottom" constant="10" id="9JY-jv-Y6h"/>
-                                    <constraint firstItem="02a-uz-YSR" firstAttribute="top" secondItem="eat-UE-CbP" secondAttribute="bottom" constant="10" id="bqR-7h-kgV"/>
-                                    <constraint firstItem="je9-ca-klV" firstAttribute="top" secondItem="z7f-EL-PVz" secondAttribute="bottom" constant="10" id="dof-My-8ni"/>
-                                    <constraint firstItem="z7f-EL-PVz" firstAttribute="top" secondItem="OMS-PQ-pCD" secondAttribute="bottom" constant="10" id="o3I-Jf-hun"/>
+                                    <constraint firstItem="WxS-jp-kkz" firstAttribute="top" secondItem="0Ls-L6-6X7" secondAttribute="bottom" id="Zjc-Nf-1LR"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -407,23 +379,20 @@
                         <constraints>
                             <constraint firstItem="Ero-ap-FQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0fx-0R-noJ"/>
                             <constraint firstItem="RDJ-Ia-pV3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="21H-FM-xxb"/>
-                            <constraint firstItem="rZg-Zb-wre" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5bg-N1-CRc"/>
+                            <constraint firstItem="RDJ-Ia-pV3" firstAttribute="top" secondItem="0Ls-L6-6X7" secondAttribute="bottom" constant="31" id="D9h-11-KQe"/>
                             <constraint firstItem="Ero-ap-FQh" firstAttribute="centerX" secondItem="RDJ-Ia-pV3" secondAttribute="centerX" id="KLT-so-gS8"/>
                             <constraint firstItem="Ero-ap-FQh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="Nyj-Dk-fz3"/>
                             <constraint firstItem="RDJ-Ia-pV3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QVp-8z-azP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rZg-Zb-wre" secondAttribute="trailing" id="TME-CV-kKC"/>
-                            <constraint firstItem="RDJ-Ia-pV3" firstAttribute="top" secondItem="rZg-Zb-wre" secondAttribute="bottom" constant="20" id="VTb-r4-oG3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RDJ-Ia-pV3" secondAttribute="bottom" constant="20" id="ejr-iM-H1p"/>
                             <constraint firstItem="E1f-8b-4wG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gbw-gj-cwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8r-q7-Z3e" secondAttribute="trailing" constant="10" id="j5o-C7-fmO"/>
+                            <constraint firstItem="r8r-q7-Z3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ms0-bD-zwy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outletCollection property="dropdownButtons" destination="OMS-PQ-pCD" collectionClass="NSMutableArray" id="Uad-2E-BX8"/>
-                        <outletCollection property="dropdownButtons" destination="je9-ca-klV" collectionClass="NSMutableArray" id="eE1-Fk-e6j"/>
-                        <outletCollection property="dropdownButtons" destination="eat-UE-CbP" collectionClass="NSMutableArray" id="8Rd-00-zXP"/>
-                        <outletCollection property="dropdownButtons" destination="02a-uz-YSR" collectionClass="NSMutableArray" id="EV2-eY-KTE"/>
-                        <outletCollection property="dropdownButtons" destination="z7f-EL-PVz" collectionClass="NSMutableArray" id="qKo-Ms-7uH"/>
+                        <outlet property="findEmojiBtn" destination="0Ls-L6-6X7" id="ZVS-d1-pKh"/>
+                        <outlet property="tblView" destination="WxS-jp-kkz" id="wFL-xg-db0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -15,7 +15,7 @@ class customizeButton: UIButton {
         super.awakeFromNib()    // awakefromnib runs only after connections are made to it
         
         let color = UIColor.white
-        self.layer.cornerRadius = 36.5
+        self.layer.cornerRadius = 31.5
         self.clipsToBounds = true
         self.layer.borderWidth = 5
         self.layer.borderColor = color.cgColor
