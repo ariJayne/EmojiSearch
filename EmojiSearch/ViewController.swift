@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var findEmojiBtn: UIButton!
     @IBOutlet weak var tblView: UITableView!
     
+   // create collection outlets of each type of button
+    @IBOutlet var happyEmojiButtons: [customizeButton]!
+    @IBOutlet var sadEmojiButtons: [customizeButton]!
+    @IBOutlet var tiredEmojiButtons: [customizeButton]!
+    @IBOutlet var loveEmojiButtons: [customizeButton]!
+    @IBOutlet var angryEmojiButtons: [customizeButton]!
+    
     var emotionList = ["Happy", "Sad", "Tired", "Love", "Angry"]
     
     override func viewDidLoad() {
@@ -44,9 +51,89 @@ class ViewController: UIViewController {
         }
     }// end function animate
     
+    func getEmojis(from selected: String){
+        //*********** REFACTOR THIS PART *********
+        switch selected {
+        case "Happy":
+            // set all other buttons to hidden
+            sadEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            
+            tiredEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            loveEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            angryEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+        case "Sad":
+            happyEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            
+            tiredEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            loveEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            angryEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+        case "Tired":
+            sadEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            
+            happyEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            loveEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            angryEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+        case "Love":
+            sadEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            
+            tiredEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            happyEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            angryEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+        case "Angry":
+            sadEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            
+            tiredEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            loveEmojiButtons.forEach {
+                $0.isHidden = true
+            }
+            happyEmojiButtons.forEach {
+                $0.isHidden = true
+            }        default:
+            print("Something bad happened")
+        }
+        
+    }// end function getEmojis
+    
 }
 
 // create extension to fill the dropdown table view
+// need to connect to viewController delegate/datasource first by ctrl dragging from tableview to viewController
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // get list of emotions and put into rows
@@ -61,7 +148,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // do stuff when item is selected
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // hide emojis except group selected
+        // link selection to tag number
+        let selected = self.emotionList[indexPath.row]
+        getEmojis(from: selected)
         animate(toggle: false)// close dropdown after item is selected
     }
 }
