@@ -10,26 +10,41 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var dropDownStack: UIStackView!
+    /* tag each button in Interface Builder
+     1-4 : happy
+     5-8 : sad
+     9- 12: tired
+     13 - 16 : love
+     17 - 20 : angry
+     */
     
     @IBOutlet weak var findEmojiBtn: UIButton!
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var showAllBtn: UIButton!
     
-   // create collection outlets of each type of button
-    @IBOutlet var happyEmojiButtons: [customizeButton]!
-    @IBOutlet var sadEmojiButtons: [customizeButton]!
-    @IBOutlet var tiredEmojiButtons: [customizeButton]!
-    @IBOutlet var loveEmojiButtons: [customizeButton]!
-    @IBOutlet var angryEmojiButtons: [customizeButton]!
+    @IBOutlet var emojiButtons: [customizeButton]! // collection outlet for emoji buttons
     
-    var emotionList = ["Happy", "Sad", "Tired", "Love", "Angry"]
+    var emotionList = ["Happy", "Sad", "Tired", "Love", "Angry"] // use for drop down list
+    
+    // create empty arrays to hold button groups
+    var happyButtons: [UIButton] = []
+    var sadButtons: [UIButton] = []
+    var tiredButtons: [UIButton] = []
+    var loveButtons: [UIButton] = []
+    var angryButtons: [UIButton] = []
+    
+    // create dictionary to hold button arrays
+    var emojiDict = [String: [UIButton]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblView.isHidden = true
+        tblView.isHidden = true // hide dropdown list on load
+        self.view.bringSubviewToFront(dropDownStack)// bring drop down in front of showAll button
         
     }
     
-    // reveal/hide dropdown list when user clicks find emoji button
+    // reveal/hide dropdown list when user clicks find emoji by group button
     @IBAction func onClickFindEmojiBtn(_ sender: Any) {
         if tblView.isHidden {
             animate(toggle: true)
@@ -38,99 +53,106 @@ class ViewController: UIViewController {
         }
     }
     
-    // create function to toggle the dropdown animation
+    // create function to toggle the dropdown
     func animate(toggle: Bool) {
-        if toggle { // if toggle is true (table is visible), set to false (hide table)
+        if toggle { // if toggle is true (table is invisible), set to false (unhide table)
             UIView.animate(withDuration: 0.3) {
-            self.tblView.isHidden = false
+                self.tblView.isHidden = false
             }
-        } else { // if false, set toggle to true (make visible)
+        } else { // if false, set toggle to true (hide table)
             UIView.animate(withDuration: 0.3) {
                 self.tblView.isHidden = true
             }
         }
     }// end function animate
     
-    func getEmojis(from selected: String){
-        //*********** REFACTOR THIS PART *********
+    func hideEmojis(by selected: String){
+        // make sure all emojis are showing before hiding
+        showAllEmojis(showAllBtn)
+        
+        // get button tags and assign to array group
+        for i in 1...20 {
+            if let button = self.view.viewWithTag(i) as? UIButton {// get button by tag and append to proper array
+                switch i {
+                case 1...4:
+                    happyButtons.append(button)
+                case 5...8:
+                    sadButtons.append(button)
+                case 9...12:
+                    tiredButtons.append(button)
+                case 12...16:
+                    loveButtons.append(button)
+                case 17...20:
+                    angryButtons.append(button)
+                default:
+                    print("something went wrong")
+                }// end switch
+            }// end optional binding
+        }// end for loop
+        
+        // then add arrays to dictionary where the key is string from emotionList
+        emojiDict["Happy"] = happyButtons
+        emojiDict["Sad"] = sadButtons
+        emojiDict["Tired"] = tiredButtons
+        emojiDict["Love"] = loveButtons
+        emojiDict["Angry"] = angryButtons
+        
+        // access dictionary key by selected, hide buttons not selected
         switch selected {
         case "Happy":
-            // set all other buttons to hidden
-            sadEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            
-            tiredEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            loveEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            angryEmojiButtons.forEach {
-                $0.isHidden = true
+            for (name, group) in emojiDict { // get key/value pair from dict
+                if name != "Happy" { // access specific groups in dict
+                    for button in group { // access each button in array and hide
+                        button.isHidden = true
+                    }
+                }
             }
         case "Sad":
-            happyEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            
-            tiredEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            loveEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            angryEmojiButtons.forEach {
-                $0.isHidden = true
+            for (name, group) in emojiDict {
+                if name != "Sad" {
+                    for button in group {
+                        button.isHidden = true
+                    }
+                }
             }
         case "Tired":
-            sadEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            
-            happyEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            loveEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            angryEmojiButtons.forEach {
-                $0.isHidden = true
+            for (name, group) in emojiDict {
+                if name != "Tired" {
+                    for button in group {
+                        button.isHidden = true
+                    }
+                }
             }
         case "Love":
-            sadEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            
-            tiredEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            happyEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            angryEmojiButtons.forEach {
-                $0.isHidden = true
+            for (name, group) in emojiDict {
+                if name != "Love" {
+                    for button in group {
+                        button.isHidden = true
+                    }
+                }
             }
         case "Angry":
-            sadEmojiButtons.forEach {
-                $0.isHidden = true
+            for (name, group) in emojiDict {
+                if name != "Angry" {
+                    for button in group {
+                        button.isHidden = true
+                    }
+                }
             }
-            
-            tiredEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            loveEmojiButtons.forEach {
-                $0.isHidden = true
-            }
-            happyEmojiButtons.forEach {
-                $0.isHidden = true
-            }        default:
-            print("Something bad happened")
+        default:
+            print("something went wrong")
         }
-        
-    }// end function getEmojis
+    }// end function hideEmojis
     
-}
+    // show all buttons again
+    @IBAction func showAllEmojis(_ sender: UIButton) {
+        for button in emojiButtons {
+            button.isHidden = false
+        }
+    }
+    
+    
+}// end class ViewController
 
 // create extension to fill the dropdown table view
 // need to connect to viewController delegate/datasource first by ctrl dragging from tableview to viewController
@@ -149,36 +171,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // do stuff when item is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // hide emojis except group selected
-        // link selection to tag number
-        let selected = self.emotionList[indexPath.row]
-        getEmojis(from: selected)
+        let selected = self.emotionList[indexPath.row]// get selected item into as a string
+        hideEmojis(by: selected)// send to function to display group of emojis
         animate(toggle: false)// close dropdown after item is selected
     }
 }
 
-
-
-
-
-/*  //represents all button titles
- enum Emotions: String {
- case happy = "Happy"
- case sad = "Sad"
- case love = "Love"
- case anger = "Anger"
- }
- @IBAction func emotionSelected(_ sender: UIButton) {
- // get current title for button tapped in order to do stuff with the selection
- guard let title = sender.currentTitle, let emotion = Emotions(rawValue: title) else{
- return
- }
- 
- switch emotion {
- case .happy:
- print("happy")
- default:
- print("nice")
- }
- } */
