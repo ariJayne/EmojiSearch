@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-Ia-pV3">
-                                <rect key="frame" x="0.0" y="390" width="319" height="190"/>
+                                <rect key="frame" x="0.0" y="390" width="320" height="190"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="312"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="357"/>
                                         <subviews>
                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Ak-QQj">
                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="63"/>
@@ -101,7 +101,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-aR-fR7">
-                                                <rect key="frame" x="0.0" y="83" width="319" height="63"/>
+                                                <rect key="frame" x="0.0" y="98" width="319" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-VV-C5Y" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -174,7 +174,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-kC-vVV">
-                                                <rect key="frame" x="0.0" y="166" width="319" height="63"/>
+                                                <rect key="frame" x="0.0" y="196" width="319" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-sr-Jrc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -247,7 +247,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-N0-EU1">
-                                                <rect key="frame" x="0.0" y="249" width="319" height="63"/>
+                                                <rect key="frame" x="0.0" y="294" width="319" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-bw-Xxc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -323,24 +323,24 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="E1f-8b-4wG" secondAttribute="bottom" constant="10" id="4IW-cs-1MQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="E1f-8b-4wG" secondAttribute="bottom" constant="-153" id="4IW-cs-1MQ"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="leading" secondItem="RDJ-Ia-pV3" secondAttribute="leading" id="JrO-Hf-etf"/>
                                     <constraint firstAttribute="height" constant="190" id="S13-fr-6GC"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="top" secondItem="RDJ-Ia-pV3" secondAttribute="top" id="ZdM-gx-OJl"/>
-                                    <constraint firstAttribute="trailing" secondItem="E1f-8b-4wG" secondAttribute="trailing" id="rwR-qv-o8d"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1f-8b-4wG" secondAttribute="trailing" constant="1" id="rwR-qv-o8d"/>
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ero-ap-FQh">
-                                <rect key="frame" x="10" y="77" width="299" height="122"/>
+                                <rect key="frame" x="10" y="77" width="300" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cZ-sc-Lln">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-zq-7K5">
-                                        <rect key="frame" x="0.0" y="30" width="299" height="92"/>
+                                        <rect key="frame" x="0.0" y="30" width="300" height="92"/>
                                         <color key="backgroundColor" red="0.88831283520000004" green="1" blue="0.76738833390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -349,10 +349,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r8r-q7-Z3e">
-                                <rect key="frame" x="10" y="316" width="299" height="200"/>
+                                <rect key="frame" x="10" y="316" width="300" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-L6-6X7">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="V4E-MK-Rth"/>
@@ -366,21 +366,21 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WxS-jp-kkz">
-                                        <rect key="frame" x="0.0" y="30" width="299" height="170"/>
+                                        <rect key="frame" x="0.0" y="30" width="300" height="170"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="170" id="SJJ-uY-62D"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="NfC-kn-7xw" style="IBUITableViewCellStyleDefault" id="9Mt-Tm-E0T">
-                                                <rect key="frame" x="0.0" y="28" width="299" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Mt-Tm-E0T" id="Z5g-g9-2w9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NfC-kn-7xw">
-                                                            <rect key="frame" x="15" y="0.0" width="269" height="43.5"/>
+                                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -406,7 +406,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydu-Ks-a4D">
-                                <rect key="frame" x="10" y="353" width="299" height="30"/>
+                                <rect key="frame" x="10" y="353" width="300" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CGd-d4-i0o"/>
@@ -429,7 +429,7 @@
                             <constraint firstItem="RDJ-Ia-pV3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QVp-8z-azP"/>
                             <constraint firstItem="Ydu-Ks-a4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dOR-8g-LT7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RDJ-Ia-pV3" secondAttribute="bottom" constant="20" id="ejr-iM-H1p"/>
-                            <constraint firstItem="E1f-8b-4wG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gbw-gj-cwJ"/>
+                            <constraint firstItem="E1f-8b-4wG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-1" id="gbw-gj-cwJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8r-q7-Z3e" secondAttribute="trailing" constant="10" id="j5o-C7-fmO"/>
                             <constraint firstItem="Ydu-Ks-a4D" firstAttribute="top" secondItem="0Ls-L6-6X7" secondAttribute="bottom" constant="7" id="mOg-6O-znH"/>
                             <constraint firstItem="r8r-q7-Z3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ms0-bD-zwy"/>
@@ -443,26 +443,26 @@
                         <outlet property="findEmojiBtn" destination="0Ls-L6-6X7" id="ZVS-d1-pKh"/>
                         <outlet property="showAllBtn" destination="Ydu-Ks-a4D" id="Csl-d0-1ds"/>
                         <outlet property="tblView" destination="WxS-jp-kkz" id="wFL-xg-db0"/>
-                        <outletCollection property="emojiButtons" destination="3El-8O-smW" collectionClass="NSMutableArray" id="SlZ-G7-4ky"/>
-                        <outletCollection property="emojiButtons" destination="oJ8-aw-iek" collectionClass="NSMutableArray" id="bI0-0C-wSE"/>
-                        <outletCollection property="emojiButtons" destination="WTg-Zh-BSN" collectionClass="NSMutableArray" id="ZzB-Gu-XHu"/>
-                        <outletCollection property="emojiButtons" destination="tbi-7k-G5A" collectionClass="NSMutableArray" id="SCM-Ze-fex"/>
-                        <outletCollection property="emojiButtons" destination="Pc7-DW-FNd" collectionClass="NSMutableArray" id="ZQ8-j3-dTl"/>
-                        <outletCollection property="emojiButtons" destination="D3V-VV-C5Y" collectionClass="NSMutableArray" id="3qD-g4-taU"/>
-                        <outletCollection property="emojiButtons" destination="w1o-3I-wnm" collectionClass="NSMutableArray" id="Vcv-p5-hOk"/>
-                        <outletCollection property="emojiButtons" destination="rkD-mA-xe7" collectionClass="NSMutableArray" id="zte-0z-GEe"/>
-                        <outletCollection property="emojiButtons" destination="Ho8-i1-E0R" collectionClass="NSMutableArray" id="Xrl-11-RdA"/>
-                        <outletCollection property="emojiButtons" destination="B6h-Rq-q0C" collectionClass="NSMutableArray" id="vuo-ls-3R1"/>
-                        <outletCollection property="emojiButtons" destination="eiH-sr-Jrc" collectionClass="NSMutableArray" id="jbE-nm-zWW"/>
-                        <outletCollection property="emojiButtons" destination="ahE-xP-4i1" collectionClass="NSMutableArray" id="g4j-GU-sf9"/>
-                        <outletCollection property="emojiButtons" destination="ZDH-h3-tVo" collectionClass="NSMutableArray" id="0KI-eE-yst"/>
-                        <outletCollection property="emojiButtons" destination="30p-iN-wnb" collectionClass="NSMutableArray" id="XRd-Cl-D68"/>
-                        <outletCollection property="emojiButtons" destination="r3J-ZC-1Yt" collectionClass="NSMutableArray" id="dLI-li-d6a"/>
-                        <outletCollection property="emojiButtons" destination="6eI-bw-Xxc" collectionClass="NSMutableArray" id="rV0-sQ-kxQ"/>
-                        <outletCollection property="emojiButtons" destination="J1i-dK-oE2" collectionClass="NSMutableArray" id="aq1-Yp-ksg"/>
-                        <outletCollection property="emojiButtons" destination="Wbh-ib-b4h" collectionClass="NSMutableArray" id="akM-a9-fyx"/>
-                        <outletCollection property="emojiButtons" destination="N2M-cD-gN0" collectionClass="NSMutableArray" id="byZ-3P-eV3"/>
-                        <outletCollection property="emojiButtons" destination="EVJ-gV-2sM" collectionClass="NSMutableArray" id="uF4-CH-Bvs"/>
+                        <outletCollection property="happyEmojiBtns" destination="3El-8O-smW" collectionClass="NSMutableArray" id="KXh-of-o2i"/>
+                        <outletCollection property="happyEmojiBtns" destination="w1o-3I-wnm" collectionClass="NSMutableArray" id="VZD-RN-i1s"/>
+                        <outletCollection property="happyEmojiBtns" destination="ZDH-h3-tVo" collectionClass="NSMutableArray" id="WRi-Ju-nAP"/>
+                        <outletCollection property="happyEmojiBtns" destination="N2M-cD-gN0" collectionClass="NSMutableArray" id="Z7j-0S-yZl"/>
+                        <outletCollection property="sadEmojiBtns" destination="tbi-7k-G5A" collectionClass="NSMutableArray" id="qFS-ZO-Fo5"/>
+                        <outletCollection property="sadEmojiBtns" destination="r3J-ZC-1Yt" collectionClass="NSMutableArray" id="aoj-pv-mxk"/>
+                        <outletCollection property="sadEmojiBtns" destination="J1i-dK-oE2" collectionClass="NSMutableArray" id="DGj-C7-8ap"/>
+                        <outletCollection property="sadEmojiBtns" destination="Wbh-ib-b4h" collectionClass="NSMutableArray" id="D5q-LX-CpU"/>
+                        <outletCollection property="tiredEmojiBtns" destination="WTg-Zh-BSN" collectionClass="NSMutableArray" id="tPp-pp-a2z"/>
+                        <outletCollection property="tiredEmojiBtns" destination="Ho8-i1-E0R" collectionClass="NSMutableArray" id="eZK-aS-vzi"/>
+                        <outletCollection property="tiredEmojiBtns" destination="30p-iN-wnb" collectionClass="NSMutableArray" id="dsx-hm-7T8"/>
+                        <outletCollection property="tiredEmojiBtns" destination="6eI-bw-Xxc" collectionClass="NSMutableArray" id="2Yj-z2-oRa"/>
+                        <outletCollection property="loveEmojiBtns" destination="oJ8-aw-iek" collectionClass="NSMutableArray" id="b0u-7i-sPY"/>
+                        <outletCollection property="loveEmojiBtns" destination="D3V-VV-C5Y" collectionClass="NSMutableArray" id="TDY-gr-feG"/>
+                        <outletCollection property="loveEmojiBtns" destination="B6h-Rq-q0C" collectionClass="NSMutableArray" id="dU1-gC-1MS"/>
+                        <outletCollection property="loveEmojiBtns" destination="eiH-sr-Jrc" collectionClass="NSMutableArray" id="Wet-0b-M6g"/>
+                        <outletCollection property="angryEmojiBtns" destination="Pc7-DW-FNd" collectionClass="NSMutableArray" id="Sdu-UU-qsz"/>
+                        <outletCollection property="angryEmojiBtns" destination="rkD-mA-xe7" collectionClass="NSMutableArray" id="GeD-tJ-YXf"/>
+                        <outletCollection property="angryEmojiBtns" destination="ahE-xP-4i1" collectionClass="NSMutableArray" id="gUt-00-iy4"/>
+                        <outletCollection property="angryEmojiBtns" destination="EVJ-gV-2sM" collectionClass="NSMutableArray" id="rhr-jc-Ifh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -23,25 +23,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var showAllBtn: UIButton!
     
-    @IBOutlet var emojiButtons: [customizeButton]! // collection outlet for emoji buttons
+   // create collection outlets for each group of emoji
+    @IBOutlet var happyEmojiBtns: [customizeButton]!
+    @IBOutlet var sadEmojiBtns: [customizeButton]!
+    @IBOutlet var tiredEmojiBtns: [customizeButton]!
+    @IBOutlet var loveEmojiBtns: [customizeButton]!
+    @IBOutlet var angryEmojiBtns: [customizeButton]!
     
     var emotionList = ["Happy", "Sad", "Tired", "Love", "Angry"] // use for drop down list
     
-    // create empty arrays to hold button groups
-    var happyButtons: [UIButton] = []
-    var sadButtons: [UIButton] = []
-    var tiredButtons: [UIButton] = []
-    var loveButtons: [UIButton] = []
-    var angryButtons: [UIButton] = []
-    
     // create dictionary to hold button arrays
     var emojiDict = [String: [UIButton]]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.isHidden = true // hide dropdown list on load
         self.view.bringSubviewToFront(dropDownStack)// bring drop down in front of showAll button
         
+        // set dictionary values to button collections
+        emojiDict["Happy"] = happyEmojiBtns
+        emojiDict["Sad"] = sadEmojiBtns
+        emojiDict["Tired"] = tiredEmojiBtns
+        emojiDict["Love"] = loveEmojiBtns
+        emojiDict["Angry"] = angryEmojiBtns
     }
     
     // reveal/hide dropdown list when user clicks find emoji by group button
@@ -70,33 +75,21 @@ class ViewController: UIViewController {
         // make sure all emojis are showing before hiding
         showAllEmojis(showAllBtn)
         
-        // get button tags and assign to array group
-        for i in 1...20 {
-            if let button = self.view.viewWithTag(i) as? UIButton {// get button by tag and append to proper array
-                switch i {
-                case 1...4:
-                    happyButtons.append(button)
-                case 5...8:
-                    sadButtons.append(button)
-                case 9...12:
-                    tiredButtons.append(button)
-                case 12...16:
-                    loveButtons.append(button)
-                case 17...20:
-                    angryButtons.append(button)
-                default:
-                    print("something went wrong")
-                }// end switch
-            }// end optional binding
+        
+        for (name, group) in emojiDict {// access dictionary
+            switch selected {
+            case "Happy":
+                if name != "Happy" { // access specific groups in dict
+                    for button in group { // access each button in array and hide
+                        button.isHidden = true
+                    }
+                }
+            default:
+                print("Something went wrong.")
+            }// end switch
         }// end for loop
         
-        // then add arrays to dictionary where the key is string from emotionList
-        emojiDict["Happy"] = happyButtons
-        emojiDict["Sad"] = sadButtons
-        emojiDict["Tired"] = tiredButtons
-        emojiDict["Love"] = loveButtons
-        emojiDict["Angry"] = angryButtons
-        
+        /*
         // access dictionary key by selected, hide buttons not selected
         switch selected {
         case "Happy":
@@ -142,16 +135,18 @@ class ViewController: UIViewController {
         default:
             print("something went wrong")
         }
+    */
     }// end function hideEmojis
     
     // show all buttons again
     @IBAction func showAllEmojis(_ sender: UIButton) {
-        for button in emojiButtons {
-            button.isHidden = false
-        }
-    }
+        for group in emojiDict.values { // loop through dictionary's collections
+            for button in group { // for each button in collection, unhide
+                button.isHidden = false
+            }
+    }// end showAll function
     
-    
+}
 }// end class ViewController
 
 // create extension to fill the dropdown table view
