@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var findEmojiBtn: UIButton!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var showAllBtn: UIButton!
+    @IBOutlet weak var displayView: UIView!
     
     // create collection outlets for each group of emoji
     @IBOutlet var happyEmojiBtns: [customizeButton]!
@@ -26,7 +27,6 @@ class ViewController: UIViewController {
     var emotionList = ["Happy", "Sad", "Tired", "Love", "Angry"] // use for drop down list
     
     var emojiDict = [String: [UIButton]]()// dictionary to hold button outlet collections
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +79,13 @@ class ViewController: UIViewController {
             }
         }
     }// end showAll function
+    
+    @IBAction func onClickEmojiButtons(_ sender: customizeButton) {
+        if let emoji = sender.currentTitle { // get emoji from button clicked
+            print(emoji)
+        }
+    }
+    
     
 }// end class ViewController
 
