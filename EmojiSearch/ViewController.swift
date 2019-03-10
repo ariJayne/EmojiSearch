@@ -107,6 +107,12 @@ class ViewController: UIViewController {
         if let emoji = sender.currentTitle { // get emoji from button clicked
             displayLbl.text = "\(emoji)" // display to screen
         }
+        
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopupID") as! PopUpViewController
+        self.addChild(popUpVC)// adds pop up view to main view controller
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParent: self)
        
               // display messages responding to user emoji
             switch sender.tag {
@@ -114,6 +120,7 @@ class ViewController: UIViewController {
                 if let happyQuote = quoteDict["Happy"] {
                     print(happyQuote.randomElement()!)// change this to call add quote to pop up view
                 }
+                
             // case 21...24:
             default:
                 print("somethting wentt wrong")
