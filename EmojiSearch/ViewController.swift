@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var showAllBtn: UIButton!
     @IBOutlet weak var displayView: UIView!
+    @IBOutlet weak var displayLbl: UILabel!
     
     // create collection outlets for each group of emoji
     @IBOutlet var happyEmojiBtns: [customizeButton]!
@@ -28,6 +29,28 @@ class ViewController: UIViewController {
     
     var emojiDict = [String: [UIButton]]()// dictionary to hold button outlet collections
     
+    // messages to respond to user input
+    var quoteDict = ["Happy": ["You are awesome!",
+                               "Sending you a little box of sunshine to brighten your day!",
+                               "You are amazing and strong and brave and wonderful. Remember that today",
+                               "Thank you for making me smile"],
+                     "Sad":   ["You are stronger than the things that made you weak",
+                               "little by little, day by day, what is meant for you will find its way",
+                               "You are enough, just as you are",
+                               "Love yourself. It's important to stay positive because beauty comes from the inside out"],
+                     "Tired": ["today will be a good day so wake up and smile!",
+                                "The early bird can have the worm, because worms are gross and mornings are stupid",
+                                "Denial, anger, bargainig, depression, acceptance.. the 5 stages of waking up",
+                                "Try [another] cup of coffee!"],
+                     "Love": ["There is no charm equal to the tenderness of the heart",
+                                "When there is love, there is life",
+                                "When someone elses happiness is your happiness, that is love",
+                                "Spread love everywhere you go. Let no one ever come to you without leaving happier"],
+                     "Angry": ["Anger is nothing more than an outward expression of hurt, fear, and frustration",
+                                "it's a lot easier to be angry at someone than it is to tell them you're hurt",
+                                "try to manage your anger since people can't manage their stupidity",
+                                "a moment of patience in a moment of anger prevents a thousand moments of regret"]]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,9 +105,25 @@ class ViewController: UIViewController {
     
     @IBAction func onClickEmojiButtons(_ sender: customizeButton) {
         if let emoji = sender.currentTitle { // get emoji from button clicked
-            print(emoji)
+            displayLbl.text = "\(emoji)" // display to screen
         }
-    }
+       
+              // display messages responding to user emoji
+            switch sender.tag {
+            case 1...4:
+                if let happyQuote = quoteDict["Happy"] {
+                    print(happyQuote.randomElement()!)// change this to call add quote to pop up view
+                }
+            // case 21...24:
+            default:
+                print("somethting wentt wrong")
+            // case 31...34:
+            //case 41...44:
+            //case 51...54:
+            }
+    
+        
+    }// end onClickEmojiButtons function
     
     
 }// end class ViewController
