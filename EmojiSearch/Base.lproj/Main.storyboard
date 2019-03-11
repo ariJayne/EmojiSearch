@@ -21,16 +21,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-Ia-pV3">
                                 <rect key="frame" x="0.0" y="390" width="320" height="190"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
                                         <subviews>
-                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Ak-QQj">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Ak-QQj">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3El-8O-smW" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3El-8O-smW" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="3El-8O-smW" secondAttribute="height" multiplier="1:1" id="9F3-3r-w7M"/>
+                                                            <constraint firstAttribute="height" constant="64" id="NcS-5x-NGn"/>
+                                                            <constraint firstAttribute="width" constant="64" id="h3d-2b-N7S"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😀">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,10 +45,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyP-bP-OXI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ8-aw-iek" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="44" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ8-aw-iek" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="5fp-EB-0IQ"/>
+                                                            <constraint firstAttribute="height" constant="64" id="Jf6-aX-1Uf"/>
+                                                            <constraint firstAttribute="width" secondItem="oJ8-aw-iek" secondAttribute="height" multiplier="1:1" id="UE5-4k-16n"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="🤟">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,10 +66,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJ4-Ku-gWK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-Zh-BSN" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128.5" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="31" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-Zh-BSN" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="468-z0-9Re"/>
+                                                            <constraint firstAttribute="height" constant="64" id="J08-NF-w8U"/>
+                                                            <constraint firstAttribute="width" secondItem="WTg-Zh-BSN" secondAttribute="height" multiplier="1:1" id="sae-Wd-nGd"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="💤">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,10 +84,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1u-cb-sF8"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-7k-G5A" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192.5" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="21" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-7k-G5A" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="67p-0h-1Xl"/>
+                                                            <constraint firstAttribute="height" constant="64" id="BJ5-Uj-a70"/>
+                                                            <constraint firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="height" multiplier="1:1" id="aOG-vn-jpF"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="☹️">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,10 +102,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHd-Wh-fcT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-DW-FNd" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="51" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-DW-FNd" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="HcT-jL-4Xf"/>
+                                                            <constraint firstAttribute="width" secondItem="Pc7-DW-FNd" secondAttribute="height" multiplier="1:1" id="nYf-hg-3sq"/>
+                                                            <constraint firstAttribute="height" constant="64" id="pic-rT-Nlt"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😠">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,16 +122,27 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="asH-HJ-0aF"/>
+                                                    <constraint firstItem="Pc7-DW-FNd" firstAttribute="height" secondItem="tbi-7k-G5A" secondAttribute="height" id="3WV-3x-MQE"/>
+                                                    <constraint firstItem="Pc7-DW-FNd" firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="width" id="69h-Mj-iI6"/>
+                                                    <constraint firstItem="WTg-Zh-BSN" firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="width" id="Mud-cf-ylX"/>
+                                                    <constraint firstAttribute="height" secondItem="3El-8O-smW" secondAttribute="height" id="Ozs-8J-f2b"/>
+                                                    <constraint firstItem="oJ8-aw-iek" firstAttribute="width" secondItem="3El-8O-smW" secondAttribute="width" id="aT9-re-F0J"/>
+                                                    <constraint firstItem="tbi-7k-G5A" firstAttribute="height" secondItem="WTg-Zh-BSN" secondAttribute="height" id="hxO-LU-AE5"/>
+                                                    <constraint firstItem="oJ8-aw-iek" firstAttribute="height" secondItem="3El-8O-smW" secondAttribute="height" id="rHr-rt-rNX"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-aR-fR7">
-                                                <rect key="frame" x="0.0" y="83" width="320" height="63"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-aR-fR7">
+                                                <rect key="frame" x="0.0" y="74" width="320" height="64"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-VV-C5Y" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="41" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-VV-C5Y" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="aRv-Pm-8nV"/>
+                                                            <constraint firstAttribute="width" secondItem="D3V-VV-C5Y" secondAttribute="height" multiplier="1:1" id="keb-rH-iTi"/>
+                                                            <constraint firstAttribute="width" constant="64" id="xWi-p5-oAp"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😘">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,10 +152,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4WC-Di-2ga"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-3I-wnm" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-3I-wnm" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="BZ4-JC-xQM"/>
+                                                            <constraint firstAttribute="width" secondItem="w1o-3I-wnm" secondAttribute="height" multiplier="1:1" id="Nw9-i6-M0F"/>
+                                                            <constraint firstAttribute="width" constant="64" id="cWP-Mp-xfO"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😺">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,10 +170,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ch-Ju-ceY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkD-mA-xe7" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128.5" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="52" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkD-mA-xe7" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="giZ-2k-7R5"/>
+                                                            <constraint firstAttribute="width" constant="64" id="iIo-rl-Pul"/>
+                                                            <constraint firstAttribute="width" secondItem="rkD-mA-xe7" secondAttribute="height" multiplier="1:1" id="zvC-RK-kut"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😡">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,10 +188,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mz-Lt-CCl"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ho8-i1-E0R" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192.5" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="32" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ho8-i1-E0R" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="K1I-mA-oBJ"/>
+                                                            <constraint firstAttribute="height" constant="64" id="P11-xG-q5Y"/>
+                                                            <constraint firstAttribute="width" secondItem="Ho8-i1-E0R" secondAttribute="height" multiplier="1:1" id="veM-Z6-9IW"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😴">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,10 +206,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqi-Th-6fJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-Rq-q0C" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="42" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-Rq-q0C" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="AJc-NN-x5S"/>
+                                                            <constraint firstAttribute="width" constant="64" id="CWb-ut-xKS"/>
+                                                            <constraint firstAttribute="width" secondItem="B6h-Rq-q0C" secondAttribute="height" multiplier="1:1" id="MYr-EN-kJt"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="💏">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,16 +226,29 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="UeX-dc-wai"/>
+                                                    <constraint firstItem="rkD-mA-xe7" firstAttribute="width" secondItem="w1o-3I-wnm" secondAttribute="width" id="25j-q2-N4J"/>
+                                                    <constraint firstItem="rkD-mA-xe7" firstAttribute="height" secondItem="w1o-3I-wnm" secondAttribute="height" id="DIL-fe-qWh"/>
+                                                    <constraint firstItem="Ho8-i1-E0R" firstAttribute="width" secondItem="rkD-mA-xe7" secondAttribute="width" id="HqL-3w-hMO"/>
+                                                    <constraint firstAttribute="height" secondItem="D3V-VV-C5Y" secondAttribute="height" id="UZX-r0-Yzv"/>
+                                                    <constraint firstItem="w1o-3I-wnm" firstAttribute="height" secondItem="D3V-VV-C5Y" secondAttribute="height" id="VwJ-si-iXK"/>
+                                                    <constraint firstItem="w1o-3I-wnm" firstAttribute="width" secondItem="D3V-VV-C5Y" secondAttribute="width" id="XL8-Fd-beQ"/>
+                                                    <constraint firstItem="Ho8-i1-E0R" firstAttribute="height" secondItem="rkD-mA-xe7" secondAttribute="height" id="cIS-yo-PKo"/>
+                                                    <constraint firstItem="B6h-Rq-q0C" firstAttribute="width" secondItem="Ho8-i1-E0R" secondAttribute="width" id="hJD-76-qt0"/>
+                                                    <constraint firstItem="B6h-Rq-q0C" firstAttribute="height" secondItem="Ho8-i1-E0R" secondAttribute="height" id="thc-JZ-kxA"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-kC-vVV">
-                                                <rect key="frame" x="0.0" y="166" width="320" height="63"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-kC-vVV">
+                                                <rect key="frame" x="0.0" y="148" width="320" height="64"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-sr-Jrc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="43" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-sr-Jrc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="eiH-sr-Jrc" secondAttribute="height" multiplier="1:1" id="Nna-Qa-x77"/>
+                                                            <constraint firstAttribute="width" constant="64" id="iSC-cb-9Zt"/>
+                                                            <constraint firstAttribute="height" constant="64" id="xaR-Wa-E53"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😍">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,10 +258,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WmB-I3-c0N"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-xP-4i1" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="53" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-xP-4i1" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="2dV-Li-gQn"/>
+                                                            <constraint firstAttribute="width" constant="64" id="cJE-5C-lXs"/>
+                                                            <constraint firstAttribute="width" secondItem="ahE-xP-4i1" secondAttribute="height" multiplier="1:1" id="dll-f8-HYs"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😖">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,10 +276,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIo-00-J2m"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-h3-tVo" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128.5" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-h3-tVo" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="91o-Dg-Ykr"/>
+                                                            <constraint firstAttribute="width" secondItem="ZDH-h3-tVo" secondAttribute="height" multiplier="1:1" id="UkF-30-vcC"/>
+                                                            <constraint firstAttribute="width" constant="64" id="XWf-WS-J4y"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😊">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,10 +294,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHl-8B-Z63"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30p-iN-wnb" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192.5" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="33" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30p-iN-wnb" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="9k0-lA-Lb0"/>
+                                                            <constraint firstAttribute="height" constant="64" id="AgU-oE-cXJ"/>
+                                                            <constraint firstAttribute="width" secondItem="30p-iN-wnb" secondAttribute="height" multiplier="1:1" id="cJc-4r-hii"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="🛌">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,10 +312,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7g-Mg-oUR"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-ZC-1Yt" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="22" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-ZC-1Yt" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="r3J-ZC-1Yt" secondAttribute="height" multiplier="1:1" id="GIC-fN-G4z"/>
+                                                            <constraint firstAttribute="height" constant="64" id="LWO-5K-FqF"/>
+                                                            <constraint firstAttribute="width" constant="64" id="hZz-g9-jKi"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😞">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,16 +332,29 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="aW7-Y3-l4P"/>
+                                                    <constraint firstAttribute="height" secondItem="eiH-sr-Jrc" secondAttribute="height" id="JfT-Vx-TpD"/>
+                                                    <constraint firstItem="ZDH-h3-tVo" firstAttribute="height" secondItem="ahE-xP-4i1" secondAttribute="height" id="U5r-2v-WbO"/>
+                                                    <constraint firstItem="ZDH-h3-tVo" firstAttribute="width" secondItem="ahE-xP-4i1" secondAttribute="width" id="WPl-uE-bPI"/>
+                                                    <constraint firstItem="30p-iN-wnb" firstAttribute="height" secondItem="ZDH-h3-tVo" secondAttribute="height" id="XUJ-24-E7D"/>
+                                                    <constraint firstItem="ahE-xP-4i1" firstAttribute="height" secondItem="eiH-sr-Jrc" secondAttribute="height" id="hNN-uw-RvJ"/>
+                                                    <constraint firstItem="r3J-ZC-1Yt" firstAttribute="height" secondItem="30p-iN-wnb" secondAttribute="height" id="klx-qm-6I6"/>
+                                                    <constraint firstItem="30p-iN-wnb" firstAttribute="width" secondItem="ZDH-h3-tVo" secondAttribute="width" id="kyy-vj-q9z"/>
+                                                    <constraint firstItem="r3J-ZC-1Yt" firstAttribute="width" secondItem="30p-iN-wnb" secondAttribute="width" id="thj-Vt-3rL"/>
+                                                    <constraint firstItem="ahE-xP-4i1" firstAttribute="width" secondItem="eiH-sr-Jrc" secondAttribute="width" id="vnc-ad-InS"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-N0-EU1">
-                                                <rect key="frame" x="0.0" y="249" width="320" height="63"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-N0-EU1">
+                                                <rect key="frame" x="0.0" y="222" width="320" height="64"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-bw-Xxc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="34" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-bw-Xxc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="Hoq-Qc-1Kc"/>
+                                                            <constraint firstAttribute="height" constant="64" id="Vad-hC-eYG"/>
+                                                            <constraint firstAttribute="width" secondItem="6eI-bw-Xxc" secondAttribute="height" multiplier="1:1" id="iTA-eg-q9q"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😪">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -262,10 +364,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68G-Il-sgW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-dK-oE2" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="23" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-dK-oE2" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="U6y-35-OOk"/>
+                                                            <constraint firstAttribute="height" constant="64" id="YqK-k9-LcO"/>
+                                                            <constraint firstAttribute="width" secondItem="J1i-dK-oE2" secondAttribute="height" multiplier="1:1" id="epT-2I-DoA"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😔">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -275,10 +382,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ywm-JN-61F"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-ib-b4h" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128.5" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="24" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-ib-b4h" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Wbh-ib-b4h" secondAttribute="height" multiplier="1:1" id="Sh0-37-Eo1"/>
+                                                            <constraint firstAttribute="width" constant="64" id="lcO-Bx-Jxh"/>
+                                                            <constraint firstAttribute="height" constant="64" id="vo6-kt-oyN"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😭">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -288,10 +400,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEh-bc-CJ6"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2M-cD-gN0" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192.5" y="0.0" width="63.5" height="63"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2M-cD-gN0" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="aV6-Cz-Geh"/>
+                                                            <constraint firstAttribute="width" secondItem="N2M-cD-gN0" secondAttribute="height" multiplier="1:1" id="e94-1Z-eAd"/>
+                                                            <constraint firstAttribute="width" constant="64" id="gim-kq-F1Z"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="🙋‍♀️">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -301,10 +418,15 @@
                                                             <action selector="onClickEmojiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aP-1u-nMq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-gV-2sM" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="63" height="63"/>
+                                                    <button opaque="NO" tag="54" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-gV-2sM" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
+                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="EVJ-gV-2sM" secondAttribute="height" multiplier="1:1" id="TOs-GJ-4HD"/>
+                                                            <constraint firstAttribute="width" constant="64" id="num-6Q-RYN"/>
+                                                            <constraint firstAttribute="height" constant="64" id="tYk-r4-5RL"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😾">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -316,14 +438,29 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="Fad-ih-uwE"/>
+                                                    <constraint firstItem="EVJ-gV-2sM" firstAttribute="height" secondItem="N2M-cD-gN0" secondAttribute="height" id="F1G-sR-PO0"/>
+                                                    <constraint firstItem="Wbh-ib-b4h" firstAttribute="height" secondItem="J1i-dK-oE2" secondAttribute="height" id="GHi-SU-rFd"/>
+                                                    <constraint firstItem="J1i-dK-oE2" firstAttribute="width" secondItem="6eI-bw-Xxc" secondAttribute="width" id="LPi-2D-hKX"/>
+                                                    <constraint firstAttribute="height" secondItem="6eI-bw-Xxc" secondAttribute="height" id="MI0-19-wes"/>
+                                                    <constraint firstItem="EVJ-gV-2sM" firstAttribute="width" secondItem="N2M-cD-gN0" secondAttribute="width" id="TAo-HC-CCS"/>
+                                                    <constraint firstItem="Wbh-ib-b4h" firstAttribute="width" secondItem="J1i-dK-oE2" secondAttribute="width" id="ZPm-6c-yyQ"/>
+                                                    <constraint firstItem="N2M-cD-gN0" firstAttribute="width" secondItem="Wbh-ib-b4h" secondAttribute="width" id="cOD-dY-3m0"/>
+                                                    <constraint firstItem="N2M-cD-gN0" firstAttribute="height" secondItem="Wbh-ib-b4h" secondAttribute="height" id="e5W-HT-jqc"/>
+                                                    <constraint firstItem="J1i-dK-oE2" firstAttribute="height" secondItem="6eI-bw-Xxc" secondAttribute="height" id="rFg-O4-o2j"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yy3-aR-fR7" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="BfQ-xE-DI0"/>
+                                            <constraint firstItem="7cW-N0-EU1" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="Tqh-eg-hMk"/>
+                                            <constraint firstItem="e4z-kC-vVV" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="V7f-GH-RIj"/>
+                                            <constraint firstItem="phb-Ak-QQj" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="btP-El-Xak"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E1f-8b-4wG" secondAttribute="bottom" constant="10" id="4IW-cs-1MQ"/>
+                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="centerX" secondItem="RDJ-Ia-pV3" secondAttribute="centerX" id="Ixm-lm-yZ0"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="leading" secondItem="RDJ-Ia-pV3" secondAttribute="leading" id="JrO-Hf-etf"/>
                                     <constraint firstAttribute="height" constant="190" id="S13-fr-6GC"/>
                                     <constraint firstItem="E1f-8b-4wG" firstAttribute="top" secondItem="RDJ-Ia-pV3" secondAttribute="top" id="ZdM-gx-OJl"/>
