@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var row: UIStackView!
+    
+    @IBOutlet weak var row4: UIStackView!
+    @IBOutlet weak var row3: UIStackView!
+    @IBOutlet weak var row2: UIStackView!
+    @IBOutlet weak var topLevelStack: UIStackView!
     @IBOutlet weak var dropDownStack: UIStackView! // create this outlet to bring this view in front of showAll button
     
     @IBOutlet weak var findEmojiBtn: UIButton!

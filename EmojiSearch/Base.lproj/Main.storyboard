@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,23 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-Ia-pV3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-Ia-pV3">
                                 <rect key="frame" x="0.0" y="390" width="320" height="190"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-8b-4wG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                                         <subviews>
-                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Ak-QQj">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Ak-QQj">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3El-8O-smW" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="3El-8O-smW" secondAttribute="height" multiplier="1:1" id="9F3-3r-w7M"/>
-                                                            <constraint firstAttribute="height" constant="64" id="NcS-5x-NGn"/>
-                                                            <constraint firstAttribute="width" constant="64" id="h3d-2b-N7S"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😀">
@@ -46,12 +45,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="44" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ8-aw-iek" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="65" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="5fp-EB-0IQ"/>
-                                                            <constraint firstAttribute="height" constant="64" id="Jf6-aX-1Uf"/>
                                                             <constraint firstAttribute="width" secondItem="oJ8-aw-iek" secondAttribute="height" multiplier="1:1" id="UE5-4k-16n"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -67,12 +64,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="31" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-Zh-BSN" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="468-z0-9Re"/>
-                                                            <constraint firstAttribute="height" constant="64" id="J08-NF-w8U"/>
                                                             <constraint firstAttribute="width" secondItem="WTg-Zh-BSN" secondAttribute="height" multiplier="1:1" id="sae-Wd-nGd"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -85,12 +80,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="21" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-7k-G5A" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="195" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="67p-0h-1Xl"/>
-                                                            <constraint firstAttribute="height" constant="64" id="BJ5-Uj-a70"/>
                                                             <constraint firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="height" multiplier="1:1" id="aOG-vn-jpF"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -103,13 +96,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="51" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-DW-FNd" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="HcT-jL-4Xf"/>
                                                             <constraint firstAttribute="width" secondItem="Pc7-DW-FNd" secondAttribute="height" multiplier="1:1" id="nYf-hg-3sq"/>
-                                                            <constraint firstAttribute="height" constant="64" id="pic-rT-Nlt"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😠">
@@ -122,26 +113,18 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Pc7-DW-FNd" firstAttribute="height" secondItem="tbi-7k-G5A" secondAttribute="height" id="3WV-3x-MQE"/>
-                                                    <constraint firstItem="Pc7-DW-FNd" firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="width" id="69h-Mj-iI6"/>
-                                                    <constraint firstItem="WTg-Zh-BSN" firstAttribute="width" secondItem="tbi-7k-G5A" secondAttribute="width" id="Mud-cf-ylX"/>
-                                                    <constraint firstAttribute="height" secondItem="3El-8O-smW" secondAttribute="height" id="Ozs-8J-f2b"/>
-                                                    <constraint firstItem="oJ8-aw-iek" firstAttribute="width" secondItem="3El-8O-smW" secondAttribute="width" id="aT9-re-F0J"/>
-                                                    <constraint firstItem="tbi-7k-G5A" firstAttribute="height" secondItem="WTg-Zh-BSN" secondAttribute="height" id="hxO-LU-AE5"/>
-                                                    <constraint firstItem="oJ8-aw-iek" firstAttribute="height" secondItem="3El-8O-smW" secondAttribute="height" id="rHr-rt-rNX"/>
+                                                    <constraint firstAttribute="height" constant="60" id="zgg-tj-B5u"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-aR-fR7">
-                                                <rect key="frame" x="0.0" y="74" width="320" height="64"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-aR-fR7">
+                                                <rect key="frame" x="0.0" y="68" width="320" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="41" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-VV-C5Y" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="aRv-Pm-8nV"/>
                                                             <constraint firstAttribute="width" secondItem="D3V-VV-C5Y" secondAttribute="height" multiplier="1:1" id="keb-rH-iTi"/>
-                                                            <constraint firstAttribute="width" constant="64" id="xWi-p5-oAp"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😘">
@@ -153,13 +136,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-3I-wnm" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="65" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="BZ4-JC-xQM"/>
                                                             <constraint firstAttribute="width" secondItem="w1o-3I-wnm" secondAttribute="height" multiplier="1:1" id="Nw9-i6-M0F"/>
-                                                            <constraint firstAttribute="width" constant="64" id="cWP-Mp-xfO"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😺">
@@ -171,12 +152,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="52" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkD-mA-xe7" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="giZ-2k-7R5"/>
-                                                            <constraint firstAttribute="width" constant="64" id="iIo-rl-Pul"/>
                                                             <constraint firstAttribute="width" secondItem="rkD-mA-xe7" secondAttribute="height" multiplier="1:1" id="zvC-RK-kut"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -189,12 +168,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="32" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ho8-i1-E0R" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="195" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="K1I-mA-oBJ"/>
-                                                            <constraint firstAttribute="height" constant="64" id="P11-xG-q5Y"/>
                                                             <constraint firstAttribute="width" secondItem="Ho8-i1-E0R" secondAttribute="height" multiplier="1:1" id="veM-Z6-9IW"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -207,12 +184,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="42" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-Rq-q0C" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="AJc-NN-x5S"/>
-                                                            <constraint firstAttribute="width" constant="64" id="CWb-ut-xKS"/>
                                                             <constraint firstAttribute="width" secondItem="B6h-Rq-q0C" secondAttribute="height" multiplier="1:1" id="MYr-EN-kJt"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -226,28 +201,18 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="rkD-mA-xe7" firstAttribute="width" secondItem="w1o-3I-wnm" secondAttribute="width" id="25j-q2-N4J"/>
-                                                    <constraint firstItem="rkD-mA-xe7" firstAttribute="height" secondItem="w1o-3I-wnm" secondAttribute="height" id="DIL-fe-qWh"/>
-                                                    <constraint firstItem="Ho8-i1-E0R" firstAttribute="width" secondItem="rkD-mA-xe7" secondAttribute="width" id="HqL-3w-hMO"/>
-                                                    <constraint firstAttribute="height" secondItem="D3V-VV-C5Y" secondAttribute="height" id="UZX-r0-Yzv"/>
-                                                    <constraint firstItem="w1o-3I-wnm" firstAttribute="height" secondItem="D3V-VV-C5Y" secondAttribute="height" id="VwJ-si-iXK"/>
-                                                    <constraint firstItem="w1o-3I-wnm" firstAttribute="width" secondItem="D3V-VV-C5Y" secondAttribute="width" id="XL8-Fd-beQ"/>
-                                                    <constraint firstItem="Ho8-i1-E0R" firstAttribute="height" secondItem="rkD-mA-xe7" secondAttribute="height" id="cIS-yo-PKo"/>
-                                                    <constraint firstItem="B6h-Rq-q0C" firstAttribute="width" secondItem="Ho8-i1-E0R" secondAttribute="width" id="hJD-76-qt0"/>
-                                                    <constraint firstItem="B6h-Rq-q0C" firstAttribute="height" secondItem="Ho8-i1-E0R" secondAttribute="height" id="thc-JZ-kxA"/>
+                                                    <constraint firstAttribute="height" constant="60" id="XN3-Uw-NXL"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-kC-vVV">
-                                                <rect key="frame" x="0.0" y="148" width="320" height="64"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-kC-vVV">
+                                                <rect key="frame" x="0.0" y="136" width="320" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="43" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-sr-Jrc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="eiH-sr-Jrc" secondAttribute="height" multiplier="1:1" id="Nna-Qa-x77"/>
-                                                            <constraint firstAttribute="width" constant="64" id="iSC-cb-9Zt"/>
-                                                            <constraint firstAttribute="height" constant="64" id="xaR-Wa-E53"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😍">
@@ -259,12 +224,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="53" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-xP-4i1" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="65" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="2dV-Li-gQn"/>
-                                                            <constraint firstAttribute="width" constant="64" id="cJE-5C-lXs"/>
                                                             <constraint firstAttribute="width" secondItem="ahE-xP-4i1" secondAttribute="height" multiplier="1:1" id="dll-f8-HYs"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -277,13 +240,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-h3-tVo" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="91o-Dg-Ykr"/>
                                                             <constraint firstAttribute="width" secondItem="ZDH-h3-tVo" secondAttribute="height" multiplier="1:1" id="UkF-30-vcC"/>
-                                                            <constraint firstAttribute="width" constant="64" id="XWf-WS-J4y"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😊">
@@ -295,12 +256,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="33" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30p-iN-wnb" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="195" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="9k0-lA-Lb0"/>
-                                                            <constraint firstAttribute="height" constant="64" id="AgU-oE-cXJ"/>
                                                             <constraint firstAttribute="width" secondItem="30p-iN-wnb" secondAttribute="height" multiplier="1:1" id="cJc-4r-hii"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -313,13 +272,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="22" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-ZC-1Yt" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="r3J-ZC-1Yt" secondAttribute="height" multiplier="1:1" id="GIC-fN-G4z"/>
-                                                            <constraint firstAttribute="height" constant="64" id="LWO-5K-FqF"/>
-                                                            <constraint firstAttribute="width" constant="64" id="hZz-g9-jKi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😞">
@@ -332,27 +289,17 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" secondItem="eiH-sr-Jrc" secondAttribute="height" id="JfT-Vx-TpD"/>
-                                                    <constraint firstItem="ZDH-h3-tVo" firstAttribute="height" secondItem="ahE-xP-4i1" secondAttribute="height" id="U5r-2v-WbO"/>
-                                                    <constraint firstItem="ZDH-h3-tVo" firstAttribute="width" secondItem="ahE-xP-4i1" secondAttribute="width" id="WPl-uE-bPI"/>
-                                                    <constraint firstItem="30p-iN-wnb" firstAttribute="height" secondItem="ZDH-h3-tVo" secondAttribute="height" id="XUJ-24-E7D"/>
-                                                    <constraint firstItem="ahE-xP-4i1" firstAttribute="height" secondItem="eiH-sr-Jrc" secondAttribute="height" id="hNN-uw-RvJ"/>
-                                                    <constraint firstItem="r3J-ZC-1Yt" firstAttribute="height" secondItem="30p-iN-wnb" secondAttribute="height" id="klx-qm-6I6"/>
-                                                    <constraint firstItem="30p-iN-wnb" firstAttribute="width" secondItem="ZDH-h3-tVo" secondAttribute="width" id="kyy-vj-q9z"/>
-                                                    <constraint firstItem="r3J-ZC-1Yt" firstAttribute="width" secondItem="30p-iN-wnb" secondAttribute="width" id="thj-Vt-3rL"/>
-                                                    <constraint firstItem="ahE-xP-4i1" firstAttribute="width" secondItem="eiH-sr-Jrc" secondAttribute="width" id="vnc-ad-InS"/>
+                                                    <constraint firstAttribute="height" constant="60" id="qfj-OL-fsq"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-N0-EU1">
-                                                <rect key="frame" x="0.0" y="222" width="320" height="64"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-N0-EU1">
+                                                <rect key="frame" x="0.0" y="204" width="320" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="34" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-bw-Xxc" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="Hoq-Qc-1Kc"/>
-                                                            <constraint firstAttribute="height" constant="64" id="Vad-hC-eYG"/>
                                                             <constraint firstAttribute="width" secondItem="6eI-bw-Xxc" secondAttribute="height" multiplier="1:1" id="iTA-eg-q9q"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -365,12 +312,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="23" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-dK-oE2" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="65" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="U6y-35-OOk"/>
-                                                            <constraint firstAttribute="height" constant="64" id="YqK-k9-LcO"/>
                                                             <constraint firstAttribute="width" secondItem="J1i-dK-oE2" secondAttribute="height" multiplier="1:1" id="epT-2I-DoA"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -383,13 +328,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="24" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-ib-b4h" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="128" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Wbh-ib-b4h" secondAttribute="height" multiplier="1:1" id="Sh0-37-Eo1"/>
-                                                            <constraint firstAttribute="width" constant="64" id="lcO-Bx-Jxh"/>
-                                                            <constraint firstAttribute="height" constant="64" id="vo6-kt-oyN"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😭">
@@ -401,13 +344,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2M-cD-gN0" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="195" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="aV6-Cz-Geh"/>
                                                             <constraint firstAttribute="width" secondItem="N2M-cD-gN0" secondAttribute="height" multiplier="1:1" id="e94-1Z-eAd"/>
-                                                            <constraint firstAttribute="width" constant="64" id="gim-kq-F1Z"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="🙋‍♀️">
@@ -419,13 +360,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="54" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-gV-2sM" customClass="customizeButton" customModule="EmojiSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="256" y="0.0" width="64" height="64"/>
+                                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                                         <color key="backgroundColor" red="1" green="0.7017263721" blue="0.71888654559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="EVJ-gV-2sM" secondAttribute="height" multiplier="1:1" id="TOs-GJ-4HD"/>
-                                                            <constraint firstAttribute="width" constant="64" id="num-6Q-RYN"/>
-                                                            <constraint firstAttribute="height" constant="64" id="tYk-r4-5RL"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="😾">
@@ -438,33 +377,18 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="EVJ-gV-2sM" firstAttribute="height" secondItem="N2M-cD-gN0" secondAttribute="height" id="F1G-sR-PO0"/>
-                                                    <constraint firstItem="Wbh-ib-b4h" firstAttribute="height" secondItem="J1i-dK-oE2" secondAttribute="height" id="GHi-SU-rFd"/>
-                                                    <constraint firstItem="J1i-dK-oE2" firstAttribute="width" secondItem="6eI-bw-Xxc" secondAttribute="width" id="LPi-2D-hKX"/>
-                                                    <constraint firstAttribute="height" secondItem="6eI-bw-Xxc" secondAttribute="height" id="MI0-19-wes"/>
-                                                    <constraint firstItem="EVJ-gV-2sM" firstAttribute="width" secondItem="N2M-cD-gN0" secondAttribute="width" id="TAo-HC-CCS"/>
-                                                    <constraint firstItem="Wbh-ib-b4h" firstAttribute="width" secondItem="J1i-dK-oE2" secondAttribute="width" id="ZPm-6c-yyQ"/>
-                                                    <constraint firstItem="N2M-cD-gN0" firstAttribute="width" secondItem="Wbh-ib-b4h" secondAttribute="width" id="cOD-dY-3m0"/>
-                                                    <constraint firstItem="N2M-cD-gN0" firstAttribute="height" secondItem="Wbh-ib-b4h" secondAttribute="height" id="e5W-HT-jqc"/>
-                                                    <constraint firstItem="J1i-dK-oE2" firstAttribute="height" secondItem="6eI-bw-Xxc" secondAttribute="height" id="rFg-O4-o2j"/>
+                                                    <constraint firstAttribute="height" constant="60" id="0VU-nv-rSQ"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="yy3-aR-fR7" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="BfQ-xE-DI0"/>
-                                            <constraint firstItem="7cW-N0-EU1" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="Tqh-eg-hMk"/>
-                                            <constraint firstItem="e4z-kC-vVV" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="V7f-GH-RIj"/>
-                                            <constraint firstItem="phb-Ak-QQj" firstAttribute="centerX" secondItem="E1f-8b-4wG" secondAttribute="centerX" id="btP-El-Xak"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E1f-8b-4wG" secondAttribute="bottom" constant="10" id="4IW-cs-1MQ"/>
-                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="centerX" secondItem="RDJ-Ia-pV3" secondAttribute="centerX" id="Ixm-lm-yZ0"/>
-                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="leading" secondItem="RDJ-Ia-pV3" secondAttribute="leading" id="JrO-Hf-etf"/>
+                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="leading" secondItem="RDJ-Ia-pV3" secondAttribute="leading" id="B9m-ip-0mz"/>
+                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="top" secondItem="RDJ-Ia-pV3" secondAttribute="top" id="QiP-kE-seF"/>
                                     <constraint firstAttribute="height" constant="190" id="S13-fr-6GC"/>
-                                    <constraint firstItem="E1f-8b-4wG" firstAttribute="top" secondItem="RDJ-Ia-pV3" secondAttribute="top" id="ZdM-gx-OJl"/>
-                                    <constraint firstAttribute="trailing" secondItem="E1f-8b-4wG" secondAttribute="trailing" id="rwR-qv-o8d"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1f-8b-4wG" secondAttribute="trailing" id="VCB-XT-r5N"/>
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ero-ap-FQh">
@@ -572,11 +496,11 @@
                             <constraint firstItem="RDJ-Ia-pV3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QVp-8z-azP"/>
                             <constraint firstItem="Ydu-Ks-a4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dOR-8g-LT7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RDJ-Ia-pV3" secondAttribute="bottom" constant="20" id="ejr-iM-H1p"/>
-                            <constraint firstItem="E1f-8b-4wG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gbw-gj-cwJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8r-q7-Z3e" secondAttribute="trailing" constant="10" id="j5o-C7-fmO"/>
                             <constraint firstItem="Ydu-Ks-a4D" firstAttribute="top" secondItem="0Ls-L6-6X7" secondAttribute="bottom" constant="7" id="mOg-6O-znH"/>
                             <constraint firstItem="r8r-q7-Z3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ms0-bD-zwy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ydu-Ks-a4D" secondAttribute="trailing" constant="10" id="msc-7x-VZi"/>
+                            <constraint firstItem="E1f-8b-4wG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rZn-zn-cix"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -585,8 +509,13 @@
                         <outlet property="displayLbl" destination="ihT-Gk-Tse" id="aG2-KW-2MF"/>
                         <outlet property="dropDownStack" destination="r8r-q7-Z3e" id="mAT-mC-1GN"/>
                         <outlet property="findEmojiBtn" destination="0Ls-L6-6X7" id="ZVS-d1-pKh"/>
+                        <outlet property="row" destination="phb-Ak-QQj" id="dUt-KX-g85"/>
+                        <outlet property="row2" destination="yy3-aR-fR7" id="oEu-OC-C3S"/>
+                        <outlet property="row3" destination="e4z-kC-vVV" id="Ktq-eb-NsZ"/>
+                        <outlet property="row4" destination="7cW-N0-EU1" id="M3o-F9-E3i"/>
                         <outlet property="showAllBtn" destination="Ydu-Ks-a4D" id="Csl-d0-1ds"/>
                         <outlet property="tblView" destination="WxS-jp-kkz" id="wFL-xg-db0"/>
+                        <outlet property="topLevelStack" destination="E1f-8b-4wG" id="GHw-sd-7Zk"/>
                         <outletCollection property="happyEmojiBtns" destination="3El-8O-smW" collectionClass="NSMutableArray" id="KXh-of-o2i"/>
                         <outletCollection property="happyEmojiBtns" destination="w1o-3I-wnm" collectionClass="NSMutableArray" id="VZD-RN-i1s"/>
                         <outletCollection property="happyEmojiBtns" destination="ZDH-h3-tVo" collectionClass="NSMutableArray" id="WRi-Ju-nAP"/>
@@ -619,11 +548,11 @@
             <objects>
                 <viewController storyboardIdentifier="popupVC" modalPresentationStyle="overCurrentContext" id="2Gh-MJ-CsA" customClass="PopUpViewController" customModule="EmojiSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzC-6m-IJT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-pY-2Zw">
-                                <rect key="frame" x="40" y="145" width="240" height="190"/>
+                                <rect key="frame" x="67.5" y="238.5" width="240" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ScW-Tf-1RL">
                                         <rect key="frame" x="0.0" y="4" width="240" height="182"/>
