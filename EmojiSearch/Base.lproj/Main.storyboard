@@ -509,13 +509,8 @@
                         <outlet property="displayLbl" destination="ihT-Gk-Tse" id="aG2-KW-2MF"/>
                         <outlet property="dropDownStack" destination="r8r-q7-Z3e" id="mAT-mC-1GN"/>
                         <outlet property="findEmojiBtn" destination="0Ls-L6-6X7" id="ZVS-d1-pKh"/>
-                        <outlet property="row" destination="phb-Ak-QQj" id="dUt-KX-g85"/>
-                        <outlet property="row2" destination="yy3-aR-fR7" id="oEu-OC-C3S"/>
-                        <outlet property="row3" destination="e4z-kC-vVV" id="Ktq-eb-NsZ"/>
-                        <outlet property="row4" destination="7cW-N0-EU1" id="M3o-F9-E3i"/>
                         <outlet property="showAllBtn" destination="Ydu-Ks-a4D" id="Csl-d0-1ds"/>
                         <outlet property="tblView" destination="WxS-jp-kkz" id="wFL-xg-db0"/>
-                        <outlet property="topLevelStack" destination="E1f-8b-4wG" id="GHw-sd-7Zk"/>
                         <outletCollection property="happyEmojiBtns" destination="3El-8O-smW" collectionClass="NSMutableArray" id="KXh-of-o2i"/>
                         <outletCollection property="happyEmojiBtns" destination="w1o-3I-wnm" collectionClass="NSMutableArray" id="VZD-RN-i1s"/>
                         <outletCollection property="happyEmojiBtns" destination="ZDH-h3-tVo" collectionClass="NSMutableArray" id="WRi-Ju-nAP"/>
